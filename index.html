@@ -7,17 +7,25 @@
 	<link rel="stylesheet" href="css/Style.css">
   </head>
 <body>
-  <script src="js/Clicker.Js"> </script>
+  <script src="js/sunflowers.js"> </script>
+  <script src="js/sweaters.js"> </script>
   <div class="info" align="right">
   <p id = 'SeedsView'>Seeds: 1</p> 
   <p id = 'MoneyView'>Money: 0</p>
   <p id = 'PainView'>Pain: 0</p>
+  <p id = 'WoolView'></p>
+  <p id = 'SweatersView'></p>
   <p class = 'attention'  id = 'Warning'></p>
   </div>
   <form>
    <div class = 'buttons' align = 'left'>
    <p><input id = 'sellbut' onclick="sell()" type="button" value=" Sell Sunflower seed "></p>
    <p><input id = 'buybut' onclick="buy()" type="button" value=" Buy Sunflower seed "></p>
+   </div>
+   <div class = 'buttonsSweaters' align = 'left'>
+   <p><input id = 'BuyButSweater' onclick="BuyWool()" type="button" value="Buy wool"></p>
+   <p><input id = 'TieButSweater' onclick="Tie()" type="button" value="Tie a sweater"></p>
+   <p><input id = 'SellButSweater' onclick="SellSweater()" type="button" value="Sell a sweater"></p>
    </div>
   </form>
   <div class = 'prices' align = 'left'>
