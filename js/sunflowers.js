@@ -1,6 +1,6 @@
 Money = 0, Seeds = 1, Pain = 0; //Количество денег и семян
 var SeedsBuyPrice = 0.1, SeedsSellPrice = 0.12, SeedsSellAmount = 1; //цена покупки, цена продажи, количество за клик
-var upgSeedsPrice = 1, upgAmountPrice = 10, upgTiredPrice = 100; //цена апгрейдов
+var upgSeedsPrice = 1, upgAmountPrice = 10, upgTiredPrice = 100, upgAmphPrice = 10000, upgFarmPrice = 100000; //цена апгрейдов
 var buildGrandsonPrice = 1, buildGranddaughterPrice = 1;  
 function sell(){
 	if (Seeds - SeedsSellAmount < 0){
@@ -102,5 +102,17 @@ function buildGranddaughter(){
 	document.getElementById("SeedsView").innerHTML='Seeds: ' + Seeds.toFixed(0).toLocaleString();
 	}
 }, 500);
+	}
+}
+
+function upgAmph(){
+	if (Money - upgAmphPrice < 0){
+	document.getElementById("Warning").innerHTML='Need more money';
+	} else {
+	Money = Money - upgAmphPrice;
+	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
+	SeedsSellAmount = SeedsSellAmount * 10;
+	SeedsSellPrice = SeedsSellPrice * 1000;
+	document.getElementById("upgAmph").style.display = "none";
 	}
 }
