@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<title>Clicker</title>
+	<link rel="stylesheet" href="css/Style.css">
+  </head>
+<body>
+  <script src="js/Clicker.Js"> </script>
+  <div class="info" align="right">
+  <p id = 'SeedsView'>Seeds: 1</p> 
+  <p id = 'MoneyView'>Money: 0</p>
+  <p id = 'PainView'>Pain: 0</p>
+  <p class = 'attention'  id = 'Warning'></p>
+  </div>
+  <form>
+   <div class = 'buttons' align = 'left'>
+   <p><input onclick="sell()" type="button" value=" Sell Sunflower seed "></p>
+   <p><input onclick="buy()" type="button" value=" Buy Sunflower seed "></p>
+   </div>
+  </form>
+  <div class = 'prices' align = 'left'>
+  <p id = 'MarketPrice'>Average price on the market: 0.12</p>
+  <p id = 'VendorPrice'>Vendor price: 0.1</p>
+  </div>
+  <div class = 'upgrades' align = 'left'>
+   <p>Upgrades:</p>
+   <p><input id = 'upgSeeds' onclick="upgSeeds()" type="button" value="The Art of Seduction (1$)"></p>
+   <p><input id = 'upgAmount' onclick="upgAmount()" type="button" value="Large deliveries (10$)"></p>
+   </div>
+   <div class = 'builds' align = 'left'>
+   <p>Help:</p>
+   <p><input id = 'buildGrandson' onclick="buildGrandson()" type="button" value="Grandson (1 pain)"></p>
+   </div>
+</body>
+</html>
