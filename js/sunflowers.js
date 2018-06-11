@@ -72,7 +72,6 @@ function upgTired(){
 	if (Money - upgTiredPrice < 0){
 	document.getElementById("Warning").innerHTML='Need more money';
 	} else {
-	Money = Money - upgTiredPrice;
 	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
 	document.getElementById("buybut").disabled = true;
 	document.getElementById("sellbut").disabled = true;
