@@ -16,8 +16,8 @@
   </div>
   <form>
    <div class = 'buttons' align = 'left'>
-   <p><input onclick="sell()" type="button" value=" Sell Sunflower seed "></p>
-   <p><input onclick="buy()" type="button" value=" Buy Sunflower seed "></p>
+   <p><input id = 'sellbut' onclick="sell()" type="button" value=" Sell Sunflower seed "></p>
+   <p><input id = 'buybut' onclick="buy()" type="button" value=" Buy Sunflower seed "></p>
    </div>
   </form>
   <div class = 'prices' align = 'left'>
@@ -28,10 +28,12 @@
    <p>Upgrades:</p>
    <p><input id = 'upgSeeds' onclick="upgSeeds()" type="button" value="The Art of Seduction (1$)"></p>
    <p><input id = 'upgAmount' onclick="upgAmount()" type="button" value="Large deliveries (10$)"></p>
+   <p><input id = 'upgTired' onclick="upgTired()" type="button" value="Tired(100$)"></p>
    </div>
    <div class = 'builds' align = 'left'>
    <p>Help:</p>
    <p><input id = 'buildGrandson' onclick="buildGrandson()" type="button" value="Grandson (1 pain)"></p>
+   <p><input id = 'buildGranddaughter' onclick="buildGranddaughter()" type="button" value="Granddaughter (1 pain)"></p>
    </div>
 </body>
 </html>

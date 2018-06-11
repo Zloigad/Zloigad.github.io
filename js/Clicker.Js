@@ -1,7 +1,7 @@
 var Money = 0, Seeds = 1, Pain = 0; //Количество денег и семян
 var SeedsBuyPrice = 0.1, SeedsSellPrice = 0.12, SeedsSellAmount = 1; //цена покупки, цена продажи, количество за клик
-var upgSeedsPrice = 1, upgAmountPrice = 10; //цена апгрейдов
-var buildGrandsonPrice = 1;  
+var upgSeedsPrice = 1, upgAmountPrice = 10, upgTiredPrice = 100; //цена апгрейдов
+var buildGrandsonPrice = 1, buildGranddaughterPrice = 1;  
 function sell(){
 	if (Seeds - SeedsSellAmount < 0){
 	document.getElementById("Warning").innerHTML='Need more seeds';
@@ -65,5 +65,39 @@ function buildGrandson(){
 	document.getElementById("SeedsView").innerHTML='Seeds: ' + Seeds.toFixed(0).toLocaleString();
 	}
 }, 1000);
+	}
+}
+
+function upgTired(){
+	if (Money - upgTiredPrice < 0){
+	document.getElementById("Warning").innerHTML='Need more money';
+	} else {
+	Money = Money - upgTiredPrice;
+	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
+	document.getElementById("buybut").disabled = true;
+	document.getElementById("sellbut").disabled = true;
+	document.getElementById("upgTired").style.display = "none";
+	Pain++;
+	document.getElementById("PainView").innerHTML='Pain: ' + Pain.toFixed(0).toLocaleString();
+	}
+}
+
+function buildGranddaughter(){
+	if (Pain - buildGranddaughterPrice < 0){
+	document.getElementById("Warning").innerHTML='Need more pain';
+	} else {
+	Pain = Pain - buildGranddaughterPrice;
+	document.getElementById("PainView").innerHTML='Pain: ' + Pain.toFixed(0).toLocaleString();
+	document.getElementById("buildGranddaughter").style.display = "none";
+	var timerId = setInterval(function() {
+	if (Seeds - SeedsSellAmount < 0){
+	document.getElementById("Warning").innerHTML='Need more seeds';
+	} else {
+	Seeds = Seeds - SeedsSellAmount;
+	Money = Money + SeedsSellPrice;
+	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
+	document.getElementById("SeedsView").innerHTML='Seeds: ' + Seeds.toFixed(0).toLocaleString();
+	}
+}, 500);
 	}
 }
