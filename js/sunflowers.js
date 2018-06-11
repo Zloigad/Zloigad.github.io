@@ -135,9 +135,9 @@ function upgDbl(){
 	} else {
 	Money = Money - upgDblPrice;
 	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
-	SeedsSellAmount = SeedsSellAmount * 1000;
-	SeedsSellPrice = SeedsSellPrice * 100000;
-	upgDblPrice = upgDblPrice * 1000;
+	SeedsSellAmount = SeedsSellAmount * 10;
+	SeedsSellPrice = SeedsSellPrice * 200;
+	upgDblPrice = upgDblPrice * 100;
 	document.getElementById("upgDbl").value = "Double money (" + (upgDblPrice * 1000) + "$)";
 	}
 }
