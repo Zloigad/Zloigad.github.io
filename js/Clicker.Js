@@ -64,6 +64,6 @@ function buildGrandson(){
 	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
 	document.getElementById("SeedsView").innerHTML='Seeds: ' + Seeds.toFixed(0).toLocaleString();
 	}
-}, 20);
+}, 1000);
 	}
 }
