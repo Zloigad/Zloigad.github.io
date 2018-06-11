@@ -116,3 +116,15 @@ function upgAmph(){
 	document.getElementById("upgAmph").style.display = "none";
 	}
 }
+
+function upgFarm(){
+	if (Money - upgFarmPrice < 0){
+	document.getElementById("Warning").innerHTML='Need more money';
+	} else {
+	Money = Money - upgFarmPrice;
+	document.getElementById("MoneyView").innerHTML='Money: ' + Money.toFixed(2).toLocaleString();
+	SeedsSellAmount = SeedsSellAmount * 100;
+	SeedsSellPrice = SeedsSellPrice * 10000;
+	document.getElementById("upgFarm").style.display = "none";
+	}
+}
