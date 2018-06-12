@@ -1,5 +1,5 @@
 //Upgrades
-upgUpgainPrice = 17, upgBreakWallPrice = 200, upgBeginPrice = 1300, upgEndPrice = 3000, upgFinishPrice = 2000000;
+upgUpgainPrice = 17, upgBreakWallPrice = 200, upgBeginPrice = 1300, upgEndPrice = 3000, upgFinishPrice = 2000000, upgBadendPrice = -10000;
 
 function upgUpgain(){
 	if (Money - upgUpgainPrice < 0){
@@ -60,4 +60,15 @@ function upgWhat(){
         document.getElementById('What').value='YOU WINNNNNNNNNNNNNNNNNNNNNNN!!!!!!!!!!!!!!!!!!!!!!!';
         document.getElementById("Warning").innerHTML='YOU WINNNNNNNNNNNNNNNNNNNNNNNNnNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN!!111211!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
         alert( "YOU WIN" );
+	}
+	
+function upgBadend(){
+	if (Money - upgBadendPrice > -10000){
+		document.getElementById("Warning").innerHTML='Need less money';
+		} else {
+        document.getElementById("beatBut").value='YOU WIN:((((((((((((((((((((((((((((((((((((((';
+        document.getElementById('What').value='YOU WINNNNNNNNNNNNNNNNNNNNNNN:((((((((((((((((((((((((((((((((((((((';
+        document.getElementById("Warning").innerHTML='YOU WINNN:((((((((((((((((((((((((((((((((((((((!!!!!!!!!!!!!!!!!!!!';
+		alert( "You win. ._. ");
+	}
     }
