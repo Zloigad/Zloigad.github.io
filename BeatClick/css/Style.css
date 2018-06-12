@@ -1,0 +1,27 @@
+p.attention {color:red;}
+.buttons {
+position:absolute;
+left:5px;
+top:5px;
+z-index:1;  
+}
+
+.prices {
+position:absolute;
+left:5px;
+top:80px;
+z-index:1;  
+}
+.upgrades {
+position:absolute;
+left:5px;
+top:160px;
+z-index:1;  
+}
+
+.secrets {
+position: absolute;
+bottom:0px;
+left:50%;
+z-index:1;  
+    }

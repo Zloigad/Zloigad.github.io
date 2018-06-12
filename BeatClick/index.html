@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>BeatClicker</title>
+	<link rel="stylesheet" href="css/Style.css">
+  </head>
+<body>
+  <script src="js/click.js"> </script>
+  <script src="js/upgrades.js"> </script>
+  <div class="info" align="right"> 
+  <p id = 'MoneyView'>Money: 0</p>
+  <p class = 'attention'  id = 'Warning'></p>
+  </div>
+  <form>
+   <div class = 'buttons' align = 'left'>
+   <p><input id = 'beatBut' onclick="beat()" type="button" value=" Beat "></p>
+   </div>
+  </form>
+  <div class = 'upgrades' align = 'left'>
+   <p>Upgrades:</p>
+   <p><input id = 'upgUpgain' onclick="upgUpgain()" type="button" value="Up you gain (17$) (DONTTOUCHTHISDOUBLE)"></p>
+   <p><input id = 'upgBreakWall' onclick="upgBreakWall()" type="button" value="BreakWall (200$)"></p>
+   <p><input id = 'upgBegin' onclick="upgBegin()" type="button" value="ToBegin (1300$)"></p>
+   <p><input id = 'upgEnd' onclick="upgEnd()" type="button" value="ToEnd (3000$)"></p>
+   <p><input id = 'upgFinish' onclick="upgFinish()" type="button" value="Finish (2 000 000$)"></p>
+   </div>
+   <div class = 'secrets' align = 'left'>
+   <p><input id = 'What' onclick="upgWhat()" type="button" value="???"></p> 
+   </div>
+</body>
+</html>
